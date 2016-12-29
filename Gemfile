@@ -24,9 +24,12 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'pg'
 gem 'slim-rails'
+gem 'figaro'
+
 group :development do
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'
+  gem 'capistrano-puma'
   gem 'capistrano-bundler'
   gem 'capistrano-rails', '~> 1.1.0'
   gem 'capistrano-rails-console'
