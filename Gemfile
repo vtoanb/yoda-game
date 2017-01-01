@@ -24,6 +24,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'pg'
 gem 'slim-rails'
+gem "react_on_rails", "~> 6"
 gem 'figaro'
 
 group :development do
