@@ -56,3 +56,5 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+
+gem 'mini_racer', platforms: :ruby
