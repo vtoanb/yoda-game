@@ -19,6 +19,7 @@ group :development do
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-facebook'
