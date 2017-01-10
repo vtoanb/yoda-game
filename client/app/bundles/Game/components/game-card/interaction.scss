@@ -1,0 +1,41 @@
+ul.interaction-bar {
+    list-style: none;
+    table-layout: fixed;
+}
+
+.table-row {
+    display: table-row;
+}
+
+li {
+    display: table-cell;
+    width: 100px;
+}
+
+span {
+    display: block;
+}
+
+h2.u-inline {
+    display: inline;
+    vertical-align: bottom;
+    padding: 20px;
+}
+
+.game-header {
+    margin-bottom: 30px;
+}
+
+.border-solid {
+    border: solid 1px #e0e0e0;
+}
+
+.h-200 {
+    height: 200px;
+}
+
+.card-img {
+    color: #fff;
+    background: url(http://res.cloudinary.com/dgwgbnszx/image/upload/c_scale,h_200/v1484025714/game-project/badland-gameplay.webp) center no-repeat;
+    background-size: cover;
+}
