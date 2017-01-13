@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Route, Router, browserHistory } from 'react-router'
+import { Link } from 'react-router'
 import ToggleButton from './toggle-button'
 
 class NavBar extends Component {
@@ -16,7 +16,7 @@ class NavBar extends Component {
             <Link to="/" className="navbar-brand">Home</Link>
             <ul className="nav navbar-nav clearfix">
               <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+                <Link to="/games" className="nav-link">Games</Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link disabled" href="#">Disabled</a>

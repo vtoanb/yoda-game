@@ -3,7 +3,7 @@ import Games from './game-card/game'
 import Navigator from './navigators/navigator'
 import NavBar from './navbar/index'
 
-export default class GameApp extends Component{
+export default class App extends Component{
   render(){
     return(
       <div>
@@ -12,7 +12,7 @@ export default class GameApp extends Component{
         </div>
         <div className="row">
           <div className="col-lg-9">
-            <Games />
+            { this.props.children }
           </div>
           <div className="col-lg-3">
             <Navigator />
