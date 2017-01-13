@@ -59,3 +59,7 @@ group :test do
 end
 
 gem 'mini_racer', platforms: :ruby
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
