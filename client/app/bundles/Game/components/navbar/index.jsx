@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import ToggleButton from './toggle-button'
+import './navbar.scss'
 
 class NavBar extends Component {
   render(){
     return(
       <div>
-        <nav className="navbar  navbar-light bg-faded">
+        <nav className="navbar container">
           <ul className="nav navbar-nav clearfix">
             <li className="nav-item">
               <ToggleButton />
@@ -16,10 +17,13 @@ class NavBar extends Component {
             <Link to="/" className="navbar-brand">Home</Link>
             <ul className="nav navbar-nav clearfix">
               <li className="nav-item">
-                <Link to="/games" className="nav-link">Games</Link>
+                <Link to="/games" className="nav-link">CATEGORY</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="#">Disabled</a>
+                <a className="nav-link" href="#">COLLECTION</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">VIDEO</a>
               </li>
             </ul>
           </div>

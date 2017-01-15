@@ -6,27 +6,27 @@ class CategoryPicker extends Component {
     return (
       <div>
         <h3>
-          Categories
+          CATEGORY
           <FontAwesome name="caret-up" className="float-right"/>
         </h3>
-        <ul className="game-category">
-          <li>Action</li>
-          <li>Adventure</li>
-          <li>Arcade</li>
-          <li>Board</li>
-          <li>Card</li>
-          <li>Casino</li>
-          <li>Casual</li>
-          <li>Educational</li>
-          <li>Music</li>
-          <li>Puzzle</li>
-          <li>Racing</li>
-          <li>Role-Playing</li>
-          <li>Simulation</li>
-          <li>Sport</li>
-          <li>Strategy</li>
-          <li>Trivia</li>
-          <li>World</li>
+        <ul className="game-category nav">
+          <li className="nav-item">Action</li>
+          <li className="nav-item">Adventure</li>
+          <li className="nav-item">Arcade</li>
+          <li className="nav-item">Board</li>
+          <li className="nav-item">Card</li>
+          <li className="nav-item">Casino</li>
+          <li className="nav-item">Casual</li>
+          <li className="nav-item">Educational</li>
+          <li className="nav-item">Music</li>
+          <li className="nav-item">Puzzle</li>
+          <li className="nav-item">Racing</li>
+          <li className="nav-item">Role-Playing</li>
+          <li className="nav-item">Simulation</li>
+          <li className="nav-item">Sport</li>
+          <li className="nav-item">Strategy</li>
+          <li className="nav-item">Trivia</li>
+          <li className="nav-item">World</li>
         </ul>
       </div>
     );

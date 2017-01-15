@@ -1,0 +1,13 @@
+ul.game-thumbnails {
+  list-style: none;
+  display: table-row;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+ul.game-thumbnails li {
+  display: table-cell;
+  width: 150px;
+  height: 125px;
+  padding: 10px 5px;
+}

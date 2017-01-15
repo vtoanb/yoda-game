@@ -6,16 +6,13 @@ import NavBar from './navbar/index'
 export default class App extends Component{
   render(){
     return(
-      <div>
+      <div className="container">
         <div className="row">
           <NavBar />
         </div>
         <div className="row">
           <div className="col-lg-9">
             { this.props.children }
-          </div>
-          <div className="col-lg-3">
-            <Navigator />
           </div>
         </div>
       </div>

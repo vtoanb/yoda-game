@@ -5,17 +5,17 @@ const SystemPicker = (props) => {
   return(
     <div>
       <h3>
-        Choose OS
+        CHOOSE OS
         <FontAwesome name="" />
       </h3>
-      <ul>
-        <li>
-          <a href="#">
+      <ul className="nav flex-column">
+        <li className="nav-item">
+          <a href="#" className="nav-link">
             <FontAwesome name="android" />
           </a>
         </li>
-        <li>
-          <a href="#">
+        <li className="nav-item">
+          <a href="#" className="nav-link">
             <FontAwesome name="apple" />
           </a>
         </li>
