@@ -1,6 +1,5 @@
 import ReactOnRails from 'react-on-rails';
 
-import HelloWorldApp from './HelloWorldApp';
 import GameApp from './game-app';
 import Games from '../components/game-card/game';
 

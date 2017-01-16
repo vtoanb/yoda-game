@@ -11,9 +11,7 @@ export default class App extends Component{
           <NavBar />
         </div>
         <div className="row">
-          <div className="col-lg-9">
-            { this.props.children }
-          </div>
+          { this.props.children }
         </div>
       </div>
     );

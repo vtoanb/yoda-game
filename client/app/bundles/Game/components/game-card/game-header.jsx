@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-const component = (props) => {
+const GameHeader = (props) => {
+  const { game_name, game_icon_image } = props
   return(
     <div className="game-header">
-      <img
-        className=""
-        src="http://res.cloudinary.com/dgwgbnszx/image/upload/c_scale,w_60/v1484023817/unnamed_1_zymmtr.webp" />
-      <h2 className="u-inline align-bottom">Bad land</h2>
+      <img src= { game_icon_image } />
+      <h2 className="u-inline align-bottom">{ game_name }</h2>
     </div>
   )
 }
 
-export default component;
+export default GameHeader
