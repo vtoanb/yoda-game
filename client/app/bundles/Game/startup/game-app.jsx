@@ -5,7 +5,7 @@ import configureStore from '../store/game-app-store'
 import GallaryContainer from '../containers/gallary-container'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import App from '../components/app'
-import Games from '../components/game-card/game'
+// import Games from '../components/game-card/game'
 import ShowGame from '../components/show'
 import Home from '../components/home'
 
