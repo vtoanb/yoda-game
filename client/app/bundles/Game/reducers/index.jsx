@@ -1,15 +1,24 @@
 import { combineReducers } from 'redux'
-const CHANGE_MAIN_PICTURE_VIDEO = 'CHANGE_MAIN_PICTURE_VIDEO'
+const CHANGE_MEDIA = 'CHANGE_MEDIA'
 
-const selectThumbnail = (state = {}, action) => {
+const media = (state = {}, action) => {
   switch (action.type) {
-    case CHANGE_MAIN_PICTURE_VIDEO:
-      return action.payload;
+    case CHANGE_MEDIA:
+      return action.payload
     default:
       return state;
   }
 }
 
-const gameReducer = combineReducers({ selectThumbnail })
+const game = (state= {}, action) => {
+  switch (action.type) {
+    case 'SHOW_GAME':
+      return action.payload
+    default:
+      return state
+  }
+}
+
+const gameReducer = combineReducers({ media, game })
 
 export default gameReducer

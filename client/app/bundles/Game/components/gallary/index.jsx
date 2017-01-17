@@ -1,26 +1,22 @@
 import React, { Component } from 'react'
-import YouTube from './video'
-import Thumbnails from './thumbnails'
+import YouTube from '../../containers/video-container'
+// change to thumbnails from container
+import Thumbnails from '../../containers/thumbnails-container'
 import './gallary.scss'
 // 2-KXXMsJWoo
 class Gallary extends Component {
-  constructor(props){
-    super(props)
-    this.state = {}
-  }
+
+  // constructor(props) {
+  //   super(props)
+  //   this.state = { media: props.thumbnails[0].data }
+  // }
 
   render(){
-    const thumbnails = [
-      {type: 'video', data: "2-KXXMsJWoo"},
-      {type: 'video', data: "vCebXPSduZ4"},
-      {type: 'video', data: "JpDi_cqDLfE"}]
-
     const prefix = `http://res.cloudinary.com/dgwgbnszx/image/upload/c_scale,w_60/v1484478878/game-project/`
-
     return (
       <div className="col-lg-12">
         <div className="row">
-          <div className="col-lg-7"><YouTube  video_id="2-KXXMsJWoo"/></div>
+          <div className="col-lg-7"><YouTube /></div>
           <div className="col-lg-3">
             <ul className="table-row">
               <li className="table-cell">
@@ -33,7 +29,7 @@ class Gallary extends Component {
             </ul>
           </div>
         </div>
-        <div><Thumbnails thumbnails={thumbnails}/></div>
+        <div><Thumbnails thumbnails={ this.props.thumbnails }/></div>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 // collection of games component
 import React from 'react'
-import GameWIcon from '../card-wicon/index'
+// import GameWIcon from '../card-wicon/index'
+import GameWIcon from '../../containers/game-wicon-container'
 import './collection.scss'
 
 const GameCollection = (props) => {

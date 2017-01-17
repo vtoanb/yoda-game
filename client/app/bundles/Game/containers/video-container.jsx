@@ -1,11 +1,10 @@
+import { connect } from 'react-redux'
 import React, { Component } from 'react'
+import { changeMedia } from '../actions/index'
 
 class YouTube extends Component {
-  constructor(props){
-    super(props)
-  }
+
   render(){
-    debugger
     const { media } = this.props
     const video_url = `https://www.youtube.com/embed/${media.data}`
     return (
@@ -21,4 +20,9 @@ class YouTube extends Component {
   }
 }
 
-export default YouTube
+const mapStateToProps = (state) => {
+  const { media } = state
+  return media
+}
+
+export default connect(mapStateToProps)(YouTube)

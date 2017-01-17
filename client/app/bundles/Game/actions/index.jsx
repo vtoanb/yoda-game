@@ -1,6 +1,12 @@
-const CHANGE_MAIN_PICTURE_VIDEO = 'CHANGE_MAIN_PICTURE_VIDEO'
+const CHANGE_MEDIA = 'CHANGE_MEDIA'
+const SHOW_GAME = 'SHOW_GAME'
 
-export const SelectThumbnail = (payload) => ({
-  type: CHANGE_MAIN_PICTURE_VIDEO,
-  payload,
-});
+export const changeMedia = (payload) => ({
+  type: CHANGE_MEDIA,
+  payload
+})
+
+export const showGame = (payload) => ({
+  type: SHOW_GAME,
+  payload
+})

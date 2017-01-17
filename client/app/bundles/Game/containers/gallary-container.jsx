@@ -1,7 +1,10 @@
 import { connect } from 'react-redux'
 import Gallary from '../components/gallary/index'
-import selectThumbnail from '../actions/index'
 
-const mapStateToProps = (state) => ({ thumbnail: state.thumbnail })
+// return main video/picture to props
+const mapStateToProps = (state) => {
+  const { media } = state
+  return media
+}
 
-export default connect(mapStateToProps, selectThumbnail)(Gallary)
+export default connect(mapStateToProps)(Gallary)
