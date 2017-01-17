@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117021958) do
+ActiveRecord::Schema.define(version: 20170117025029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170117021958) do
   end
 
   create_table "thumbnails", force: :cascade do |t|
-    t.string   "type"
+    t.string   "media_type"
     t.string   "data"
     t.integer  "game_id"
     t.datetime "created_at", null: false
