@@ -6,25 +6,24 @@ import { browserHistory } from 'react-router'
 
 class GameWIcon extends Component {
   handleClick() {
-    // Todo update game info to show
-    this.props.showGame(this.props)
-    this.props.changeMedia({})
-    browserHistory.push('/games')
+    const { id, thumbnail } = this.props
+    this.props.changeMedia(thumbnail)
+    browserHistory.push(`games/${id}`)
   }
   render(){
-    const { game_icon_image, game_name } = this.props
+    const { icon, name } = this.props
 
     return (
       <div onClick={ ()=>{ this.handleClick() } }>
-        <img className="card-img-top" src = { game_icon_image } />
-        <p className="card-title">{ game_name }</p>
+        <img className="card-img-top" src = { icon } />
+        <p className="card-title">{ name }</p>
       </div>
     )
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  bindActionCreators({ changeMedia, showGame }, dispatch)
-}
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({ changeMedia }, dispatch)
+)
 
-export default GameWIcon
+export default connect(null, mapDispatchToProps)(GameWIcon)

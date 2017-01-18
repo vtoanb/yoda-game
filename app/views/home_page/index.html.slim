@@ -1,2 +1,2 @@
-/ = react_component("Games", trace: true)
-= react_component("GameApp", trace: true)
+// props pass as a store
+= react_component('GameApp', props: render(template: "/home_page/index.json.jbuilder"), prerender: false)

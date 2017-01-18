@@ -5,7 +5,6 @@ class YouTube extends Component {
     super(props)
   }
   render(){
-    debugger
     const { media } = this.props
     const video_url = `https://www.youtube.com/embed/${media.data}`
     return (

@@ -1,38 +1,38 @@
 import React, { Component } from 'react'
-import YouTube from '../../containers/video-container'
-// change to thumbnails from container
+import YouTube from './video'
 import Thumbnails from '../../containers/thumbnails-container'
 import './gallary.scss'
-// 2-KXXMsJWoo
+import { connect } from 'react-redux'
+
 class Gallary extends Component {
-
-  // constructor(props) {
-  //   super(props)
-  //   this.state = { media: props.thumbnails[0].data }
-  // }
-
+  constructor(props) {
+    super(props)
+  }
   render(){
-    const prefix = `http://res.cloudinary.com/dgwgbnszx/image/upload/c_scale,w_60/v1484478878/game-project/`
+    const { media, games, id } = this.props
+    const game = games.find(game => (game.id == id))
     return (
       <div className="col-lg-12">
         <div className="row">
-          <div className="col-lg-7"><YouTube /></div>
+          <div className="col-lg-7"><YouTube media={ media }/></div>
           <div className="col-lg-3">
             <ul className="table-row">
-              <li className="table-cell">
-                <img src={ prefix + 'tap-tap-dash'}/>
+              <li className="table-cell w-60">
+                <img src={ game.icon }/>
               </li>
               <li className="table-cell">
-                <span className="d-block game-title">Tap tap dash</span>
+                <span className="d-block game-title">{ game.name }</span>
                 <span className="d-block game-publisher">ABC Coperation</span>
               </li>
             </ul>
           </div>
         </div>
-        <div><Thumbnails thumbnails={ this.props.thumbnails }/></div>
+        <div><Thumbnails thumbnails={ game.thumbnails }/></div>
       </div>
     )
   }
 }
 
-export default Gallary
+const mapStateToProps = ({ games, media }) => ({ games: games, media: media })
+
+export default connect(mapStateToProps)(Gallary)

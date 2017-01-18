@@ -1,0 +1,1 @@
+json.extract! thumbnail, :data, :media_type, :id

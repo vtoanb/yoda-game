@@ -11,7 +11,7 @@ class Thumbnails extends Component {
 
   displayThumbnail = this.props.thumbnails.map(
     thumbnail => {
-      if(thumbnail.type != "video") {
+      if(thumbnail.media_type != "video") {
         return(
           <li
             onClick={ () => { this.props.changeMedia(thumbnail)} }
