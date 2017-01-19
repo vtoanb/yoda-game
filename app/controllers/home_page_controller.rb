@@ -1,5 +1,5 @@
 class HomePageController < ApplicationController
   def index
-    @games = Game.all
+    @games = Game.includes(:thumbnails).all
   end
 end
