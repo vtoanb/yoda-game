@@ -43,7 +43,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // select data from global state
-const select = state => ({ payload: state.media })
+const select = state => ({ media: state.media })
 
 // change state=null -> media later
 export default connect(select, mapDispatchToProps)(Thumbnails)

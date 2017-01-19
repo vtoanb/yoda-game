@@ -26,4 +26,6 @@ const mapDispatchToProps = (dispatch) => (
   bindActionCreators({ changeMedia }, dispatch)
 )
 
-export default connect(null, mapDispatchToProps)(GameWIcon)
+const select = state => ({ media: state.media })
+
+export default connect(select, mapDispatchToProps)(GameWIcon)
