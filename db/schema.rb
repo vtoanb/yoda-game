@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117025029) do
+ActiveRecord::Schema.define(version: 20170119030957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_games", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_category_games_on_category_id", using: :btree
+    t.index ["game_id"], name: "index_category_games_on_game_id", using: :btree
+  end
+
+  create_table "collection_items", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "collection_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["collection_id"], name: "index_collection_items_on_collection_id", using: :btree
+    t.index ["game_id"], name: "index_collection_items_on_game_id", using: :btree
+  end
+
+  create_table "collections", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string   "name"
@@ -39,5 +69,9 @@ ActiveRecord::Schema.define(version: 20170117025029) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "category_games", "categories"
+  add_foreign_key "category_games", "games"
+  add_foreign_key "collection_items", "collections"
+  add_foreign_key "collection_items", "games"
   add_foreign_key "thumbnails", "games"
 end
