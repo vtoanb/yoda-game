@@ -42,5 +42,8 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ changeMedia }, dispatch)
 }
 
+// select data from global state
+const select = state => ({ payload: state.media })
+
 // change state=null -> media later
-export default connect(null, mapDispatchToProps)(Thumbnails)
+export default connect(select, mapDispatchToProps)(Thumbnails)
