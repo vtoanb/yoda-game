@@ -3,7 +3,6 @@ const CHANGE_MEDIA = 'CHANGE_MEDIA'
 const SHOW_GAME = 'SHOW_GAME'
 
 const media = (state = {}, action) => {
-  // debugger
   switch (action.type) {
     case CHANGE_MEDIA:
       return action.payload
